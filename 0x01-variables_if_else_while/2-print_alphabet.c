@@ -1,9 +1,9 @@
 #include <stdio.h>
 
 /**
- *main - Entry point
- *Description - printing out the letters in lowercase
- *Return - Always (0) sucess
+ * main - Entry point
+ * Description: 'the program's description'
+ * Return: Always 0 (Success)
  */
 
 int main(void)
