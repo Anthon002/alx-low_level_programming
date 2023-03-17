@@ -2,18 +2,24 @@
 
 /**
  * main - Entry point
- * Description: 'print alphabet in upper case'
+ * Description: 'the program's description'
  * Return: Always 0 (Success)
  */
 
 int main(void)
 {
-        char alphab;
+	char alphab;
 
-        for (alphab = 'A'; alphab <= 'Z'; alphab++)
-        {
-                putchar(alphab);
-        };
-        putchar('\n');
-        return (0);
+	for (alphab = 'a'; alphab <= 'z'; alphab++)
+	{
+		putchar(alphab);
+	};
+	for (alphab = 'A'; alphab <= 'Z'; alphab++)
+	{
+		putchar(alphab);
+	};
+	putchar('\n');
+
+	return (0);
 }
+
