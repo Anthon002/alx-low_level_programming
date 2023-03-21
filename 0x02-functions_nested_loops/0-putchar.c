@@ -7,5 +7,5 @@
 
 int main()
 {
-  print("_putchar")
+  printf("_putchar");
 };
