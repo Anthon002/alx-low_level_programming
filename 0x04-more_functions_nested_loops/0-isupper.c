@@ -1,4 +1,5 @@
 #include "main.h"
+#include <ctype.h>
 /**
  * _isupper - check the code.
  *@c: to check
@@ -7,7 +8,7 @@
  */
 int _isupper(int c)
 {
-	if (c >= 'A' && <= 'Z')
+	if (isupper(c))
 	{
 		return (1);
 	}
