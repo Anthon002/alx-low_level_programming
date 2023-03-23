@@ -2,14 +2,13 @@
 /**
  *print_numbers - main function
  *
- *Return: 0
+ *Return: void
  */
 void print_numbers(void)
 {
-	for (int a = 0; a < 10; a++)
+	for (char a = 0; a < 10; a++)
 	{
 		_putchar(a);
 	};
 	_putchar('\n');
-	return (0);
 }
