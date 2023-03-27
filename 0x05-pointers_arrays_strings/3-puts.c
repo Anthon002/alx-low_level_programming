@@ -12,8 +12,9 @@ void _puts(char *str)
 {
 	int c = 0;
 
-	while (c != '\0')
+	while (*str[c] != '\0')
 	{
-		_putchar(*str);
+		_putchar(*str[c]);
+		c++;
 	};
 }
