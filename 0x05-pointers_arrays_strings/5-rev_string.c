@@ -3,18 +3,21 @@
 #include "main.h"
 
 /**
- * rev_tring - main function
+ * rev_string - main function
  * @s:parameter
  * Return: void;
  */
 
 void rev_string(char *s)
 {
-	int c = strlen(s) - 1;
+	int a, b, c;
 
-	while (c >= 0)
+	a = strlen(s) - 1;
+	c = strlen(s) - 1;
+	while (a >= 0)
 	{
-		_putchar(s[c]);
-		c--;
+		b = c - a;
+		s[b] = s[a];
+		a--;
 	};
 }
