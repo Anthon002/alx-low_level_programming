@@ -10,5 +10,8 @@
 
 void _puts(char *str)
 {
-	_putchar(*str);
+	for (int a = 0; a <= strlen(str); a++)
+	{
+		_putchar(*str);
+	};
 }
