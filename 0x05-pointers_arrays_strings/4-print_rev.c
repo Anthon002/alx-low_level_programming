@@ -10,10 +10,9 @@
 
 void print_rev(char *s)
 {
-	char news[] = *s;
-	char c = strlen(news) - 1;
+	char c = strlen(s) - 1;
 
 	while (c >= 0)
 	{
-		_putchar(news[c]);
+		_putchar(s[c]);
 	};
