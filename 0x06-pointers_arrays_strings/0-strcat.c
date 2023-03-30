@@ -12,29 +12,19 @@
 
 char *_strcat(char *dest, char *src)
 {
-	char *result = malloc(strlen(dest) + strlen(src) + 1);
-	int c = 0;
-	int d = 0;
-	int e = 0;
+    char *concat_str = dest;
 
-	while (*dest != '\0')
-	{
-		result[d] = dest[c];
-		c++;
-		d++;
-	};
-	c = 0;
+    while (*dest)
+    {
+        dest++;
+    }
 
-	while (e == 0)
-	{
-		result[d] = src[c];
-		c++;
-		d++;
-		if (*src == '\0')
-		{
-			break;
-		};
-	};
+    while (*src)
+    {
+        *dest++ = *src++;
+    }
 
-	return (result);
+    *dest = '\0';
+
+    return concat_str;
 }
