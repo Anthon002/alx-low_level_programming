@@ -7,6 +7,6 @@
 int _putchar(char c);
 char *_memset(char *s, char b, unsigned int n);
 char *_strchr(char *s, char c);
-char *_strbrk(char *s, char *accept);
+char *_strpbrk(char *s, char *accept);
 
 #endif
