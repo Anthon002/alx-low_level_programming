@@ -14,7 +14,7 @@
  * Return: 1 if the string is palindrome, 0 otherwise
  * 
  */
-int string_length(char *s)
+int string_length(char *str)
 {
 	if (*str == '\0')
 	{
