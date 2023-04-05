@@ -9,15 +9,11 @@
 
 void _puts_recursion(char *s)
 {
-	char words[] = "Puts with recursion";
+	_putchar(*s);
+	s++;
 
-	s = words;
-
-	int i = 0;
-
-	while (*s)
+	if (*s != '\0')
 	{
-		_putchar(words[i]);
-		i++;
-	}
+		_puts_recursion(s);
+	};
 }
