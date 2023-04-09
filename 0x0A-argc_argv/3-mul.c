@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
 	{
 		printf("%d\n", atoi(argv[1]) * atoi(argv[2]));
 	}
-	else
+	else if (argc == 0)
 	{
 		printf("Error: please provide two integer arguments\n");
 	}
