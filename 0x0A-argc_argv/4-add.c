@@ -1,29 +1,32 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 
 /**
  * main - add arguments
  * @argc: argument count
  * @argv: arguments
- * Return: 0
+ * Return: 0 on success, 1 on failure
  */
-
 int main(int argc, char *argv[])
 {
-	int a = 0;
-
+	int sum = 0;
+	
 	for (int i = 1; i < argc; i++)
 	{
-		if (atoi(argv[1]))
+		int j = 0;
+		while (argv[i][j] != '\0')
 		{
-			a += atoi(argv[i]);
+			if (!isdigit(argv[i][j]))
+			{
+				printf("Error\n");
+				return (1);
+			}
+			j++;
 		}
-		else
-		{
-			printf("Error\n");
-			return (1);
-		}
-	};
-	printf("%d\n", a);
+		sum += atoi(argv[i]);
+	}
+	printf("%d\n", sum);
 	return (0);
 }
+
