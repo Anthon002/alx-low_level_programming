@@ -1,32 +1,37 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <ctype.h>
 
 /**
- * main - add arguments
+ * main - adding positive numbers.
  * @argc: argument count
  * @argv: arguments
+ *
  * Return: 0 on success, 1 on failure
  */
 int main(int argc, char *argv[])
 {
-	int sum = 0;
-	
-	for (int i = 1; i < argc; i++)
+	int index, num, sum = 0;
+	char *endptr;
+
+	if (argc < 2)
 	{
-		int j = 0;
-		while (argv[i][j] != '\0')
-		{
-			if (!isdigit(argv[i][j]))
-			{
-				printf("Error\n");
-				return (1);
-			}
-			j++;
-		}
-		sum += atoi(argv[i]);
+		printf("0\n");
+		return (0);
+	}
+
+	for (index = 1; argv[index] != NULL; index++)
+	{
+		num = strtol(argv[index], &endptr, 10);
+		if (*endptr != '\0')
+	{
+		    printf("Error\n");
+		    return (1);
+	}
+	sum += num;
 	}
 	printf("%d\n", sum);
+
 	return (0);
-}
+	}
+
 
