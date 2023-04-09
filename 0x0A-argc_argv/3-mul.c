@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
 	}
 	else if (argc == 0)
 	{
-		printf("Error: please provide two integer arguments\n");
+		printf("Error\n");
 	}
 	return (0);
 }
