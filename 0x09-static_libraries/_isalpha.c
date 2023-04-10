@@ -1,4 +1,11 @@
-#include "main.h"\n\n/* Your code for _isalpha here */\n
-int _isalpha(int c) {
-    /* Your code here */
+#include "main.h"
+
+/** _abs - function
+ *@n: parameter
+ *Return: 0
+ */
+
+int _isalpha(int c) 
+{
+    return (0);
 }
