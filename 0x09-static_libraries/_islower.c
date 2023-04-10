@@ -1,4 +1,11 @@
-#include "main.h"\n\n/* Your code for _islower here */\n
-int _islower(int c) {
-    /* Your code here */
+#include "main.h"
+
+/**_islower - function
+ *@c: parameter
+ *Return: 0
+ */
+
+int _islower(int c)
+{
+    return (0);
 }
