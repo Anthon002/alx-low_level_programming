@@ -1,4 +1,11 @@
-#include "main.h"\n\n/* Your code for _isdigit here */\n
-int _isdigit(int c) {
-    /* Your code here */
+#include "main.h"
+
+/** _isdigit - function
+ *@c: parameter
+ *Return: 0
+ */
+
+int _isdigit(int c)
+{
+    return (0);
 }
