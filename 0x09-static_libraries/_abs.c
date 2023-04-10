@@ -1,4 +1,10 @@
-#include "main.h"\n\n/* Your code for _abs here */\n
-int _abs(int n) {
-    /* Your code here */
+#include "main.h
+
+/** _abs - function
+*@n: parameter
+*Return: 0
+*/
+int _abs(int n)
+{
+    return (0);
 }
