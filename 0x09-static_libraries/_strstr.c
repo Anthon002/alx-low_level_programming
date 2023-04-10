@@ -1,4 +1,11 @@
-#include "main.h"\n\n/* Your code for _strstr here */\n
-char *_strstr(char *haystack, char needle) {
- / Your code here */
+#include "main.h"
+
+/**_strstr - function
+ *@heystack: parameter
+ *@needle: parameter
+ *Return: 0
+ */
+char *_strstr(char *haystack, char needle)
+{
+ return (0);
 }
