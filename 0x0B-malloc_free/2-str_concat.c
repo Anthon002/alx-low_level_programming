@@ -29,6 +29,10 @@ char *str_concat(char *s1, char *s2)
 	{
 		return (NULL);
 	}
+	else if (s2 == NULL)
+	{
+		s2 = "";
+	}
 	else
 	{
 		while (in < i)
