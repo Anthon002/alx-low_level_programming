@@ -3,12 +3,12 @@
 #include "main.h"
 
 /**
- * concat_args - concatenates all the arguments of a program into a single string
+ * argstostr - concatenates all the arguments of a program into a single string
  * @ac: number of arguments
  * @av: array of strings containing the arguments
  * Return: a pointer to a new string, or NULL if it fails
  */
-char *concat_args(int ac, char **av)
+char *argstostr(int ac, char **av)
 {
     char *result;
     int i, j, total_len = 0;
