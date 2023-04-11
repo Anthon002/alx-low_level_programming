@@ -3,38 +3,37 @@
 #include "main.h"
 
 /**
- * argstostr - concatenates all the arguments
+ * concat_args - concatenates all the arguments of a program into a single string
  * @ac: number of arguments
  * @av: array of strings containing the arguments
+ *
  * Return: a pointer to a new string, or NULL if it fails
  */
-
-char *argstostr(int ac, char **av)
+char *concat_args(int ac, char **av)
 {
-	char *result;
-	int i, j, total_len = 0;
+    char *result;
+    int i, j, total_len = 0;
 
-	if (ac == 0 || av == NULL)
-	{
-		return (NULL);
-	}
-	for (i = 0; i < ac; i++)
-	{
-		total_len += strlen(av[i]);
-	}
+    if (ac == 0 || av == NULL)
+        return NULL;
 
-	result = malloc(sizeof(char) * (total_len + 1));
-	if (result == NULL)
-	{
-		return (NULL);
-	}
+    for (i = 0; i < ac; i++)
+    {
+        total_len += strlen(av[i]);
+        total_len++; // add newline character
+    }
 
-	for (i = 0, j = 0; i < ac; i++)
-	{
-		strcpy(result + j, av[i]);
-		j += strlen(av[i]);
-		result[j++] = '\n';
-	}
-	result[total_len] = '\0';
-	return (result);
+    result = (char *) malloc(sizeof(char) * (total_len + 1));
+    if (result == NULL)
+        return NULL;
+
+    for (i = 0, j = 0; i < ac; i++)
+    {
+        strcpy(result + j, av[i]);
+        j += strlen(av[i]);
+        result[j++] = '\n'; // add newline character
+    }
+    result[total_len] = '\0';
+
+    return result;
 }
