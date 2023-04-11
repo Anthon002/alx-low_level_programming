@@ -4,7 +4,7 @@
 
 /**
  * argstostr - concatenate argument
- * @ac: argument count 
+ * @ac: argument count
  * @av: argument array
  * Return: a pointer or Null
  */
@@ -16,7 +16,7 @@ char *argstostr(int ac, char **av)
 
 	if (ac == 0 || av == NULL)
 	{
-		return NULL;
+		return( NULL);
 	}
 
 	for (i = 0; i < ac; i++)
@@ -28,14 +28,14 @@ char *argstostr(int ac, char **av)
 	result = (char *) malloc(sizeof(char) * (total_len + 1));
 	if (result == NULL)
 	{
-		return NULL;
+		return(NULL);
 	}
 	for (i = 0, j = 0; i < ac; i++)
 	{
 		strcpy(result + j, av[i]);
 		j += strlen(av[i]);
-		result[j++] = '\n'; 
+		result[j++] = '\n';
 	}
 	result[total_len] = '\0';
-	return result;
+	return(result);
 }
