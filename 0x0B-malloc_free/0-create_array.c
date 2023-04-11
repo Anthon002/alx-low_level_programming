@@ -5,20 +5,20 @@
 /**
  * create_array - create an array of char
  * @size: size of the char
- * @char: character
- * Returns: Null or pointer
+ * @c: character
+ * Return: Null or pointer
  */
 
 char *create_array(unsigned int size, char c)
-{	
+{
+	char *strings;
+	int i = 0;
+
 	if (size == 0)
 	{
 		return (NULL);
 	};
-	
-	char *strings;
-
-	strings = (char*) malloc(size * sizeof(char));
+	strings = (char *) malloc(size * sizeof(char));
 
 	if (*strings == NULL)
 	{
@@ -26,7 +26,7 @@ char *create_array(unsigned int size, char c)
 	}
 	else
 	{
-		for (int i = 0; i < size; i++)
+		for (i = 0; i < size; i++)
 		{
 			strings[i] = c;
 		}
