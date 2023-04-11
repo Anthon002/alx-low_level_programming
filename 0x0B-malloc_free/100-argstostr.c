@@ -6,7 +6,6 @@
  * concat_args - concatenates all the arguments of a program into a single string
  * @ac: number of arguments
  * @av: array of strings containing the arguments
- *
  * Return: a pointer to a new string, or NULL if it fails
  */
 char *concat_args(int ac, char **av)
@@ -20,7 +19,7 @@ char *concat_args(int ac, char **av)
     for (i = 0; i < ac; i++)
     {
         total_len += strlen(av[i]);
-        total_len++; // add newline character
+        total_len++;
     }
 
     result = (char *) malloc(sizeof(char) * (total_len + 1));
@@ -31,7 +30,7 @@ char *concat_args(int ac, char **av)
     {
         strcpy(result + j, av[i]);
         j += strlen(av[i]);
-        result[j++] = '\n'; // add newline character
+        result[j++] = '\n'; 
     }
     result[total_len] = '\0';
 
