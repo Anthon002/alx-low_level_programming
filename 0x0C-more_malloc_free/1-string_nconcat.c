@@ -1,62 +1,67 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "main.h"
 
 /**
- * string_nconcat - concatenate strings
- * @s1: first string
- * @s2: second string
- * @n: space
+ * string_nconcat - a function that concatenates two strings.
+ *
+ * @s1: first char
+ * @s2: secound char
+ * @n: unsigned int
+ *
+ * Return: If the function fails, it should return NULL
  */
-
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *new;
-	int j = 0;
-	int k = 0;
+	unsigned int i = 0, j = 0, k = 0;
+	char *s;
 
-	while (s1[j] != '\0')
-	{
-		j++;
-	}
-	while (s2[k] != '\0')
-	{
-		k++;
-	}
-	if (n >= k)
-	{
-		n = k;
-	}
 	if (s1 == NULL)
 	{
-		s1 = "";
-	}
-	else if (s2 == NULL)
-	{
-		s2 = "";
-	}
-	new = (char *) malloc(sizeof(char) * (n + j + 1));
-	j = 0;
-	if (new == NULL)
-	{
-		return (NULL);
+		i = 0;
 	}
 	else
 	{
-		while (s1[j] != '\0')
+		while (s1[i])
 		{
-			new[j] = s1[j];
-			j++;
-		};
-		while (s2[k] != '\0')
+			i++;
+		}
+	}
+
+	if (s2 == NULL)
+	{
+		j = 0;
+	}
+	else
+	{
+		while (s2[j])
 		{
-			new[j] = s2[k];
-			k++;
 			j++;
-		};
-		new[j] = '\0';
-		return (new);
-	};
+		}
+	}
+
+	if (j > n)
+	{
+		j = n;
+	}
+
+	s = malloc(sizeof(char) * (i + j + 1));
+	if (s == NULL)
+	{
+		return (NULL);
+	}
+
+	while (k < i)
+	{
+		s[k] = s1[k];
+		k++;
+	}
+
+	while (k < i + j)
+	{
+		s[k] = s2[k - i];
+		k++;
+	}
+
+	s[k] = '\0';
+
+	return (s);
 }
-
-
