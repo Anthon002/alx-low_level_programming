@@ -1,4 +1,4 @@
-#include "header.h"
+#include "main.h"
 
 /**
  * _calloc - allocates memory for an array
