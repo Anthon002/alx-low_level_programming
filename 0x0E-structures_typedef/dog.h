@@ -14,8 +14,8 @@ struct dog
 	float age;
 };
 
-void poppy(struct dog *d, char *name, float age, char *owner);
-void printPoppy(struct dog *d);
+void init_dog(struct dog *d, char *name, float age, char *owner);
+void print_dog(struct dog *d);
 
 typedef struct dog dog_type;
 
