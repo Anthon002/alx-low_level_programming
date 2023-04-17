@@ -3,24 +3,24 @@
 
 /**
  * struct dog - class of dog
- * @dog_name: dog's name
- * @dog_age: dog's age
- * @dog_owner: dog's owner
+ * @name: dog's name
+ * @age: dog's age
+ * @owner: dog's owner
  */
 
 struct dog
 {
-	char *dog_name,*dog_owner;
-	float dog_age;
+	char *name,*owner;
+	float age;
 };
 
-void init_dog(struct dog *d, char *dog_name, float dog_age, char *dog_owner);
-void print_dog(struct dog *d);
+void poppy(struct dog *d, char *name, float age, char *owner);
+void printPoppy(struct dog *d);
 
 typedef struct dog dog_type;
 
-dog_type *new_dog(char *dog_name, float dog_age, char *dog_owner);
+dog_type *new_dog(char *name, float age, char *owner);
 
-void dog_free(dog_type *d);
+void dogFree(dog_type *d);
 
 #endif
