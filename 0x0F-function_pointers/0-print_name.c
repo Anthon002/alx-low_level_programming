@@ -1,3 +1,5 @@
+#include <stddef.h>
+#include "main.h"
 /**
  * print_name - function that prints name
  * @name: char name
@@ -7,8 +9,5 @@
 
 void print_name(char *name, void (*f)(char *))
 {
-	if (f && name)
-	{
-		f(name);
-	};
+	f(name);
 }
