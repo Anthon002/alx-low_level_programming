@@ -1,17 +1,14 @@
-#include <stdio.h>
-#include "main.h"
-
 /**
- * print_name: function that  prints a name
+ * print_name - function that prints name
  * @name: char name
- * @f:fucntion that takes in name
+ * @f: function that takes name
  * Return: void
- */
+*/
 
 void print_name(char *name, void (*f)(char *))
 {
 	if (f && name)
 	{
 		f(name);
-	}
+	};
 }
