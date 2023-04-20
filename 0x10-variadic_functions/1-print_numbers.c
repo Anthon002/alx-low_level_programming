@@ -2,14 +2,14 @@
 
 /**
  * print_numbers - function to print no.s with newlines
- * @separator: separator 
+ * @separator: separator
  * @n: number of arguments
  * Return: void
  */
 
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
-  va_list args;
+	va_list args;
 	unsigned int i;
 	int num;
 
