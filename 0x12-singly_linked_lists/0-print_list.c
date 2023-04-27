@@ -5,24 +5,17 @@
  * @h: head of list
  * Return: the number of nodes
  */
-size_t print_list(const list_t *h)
+size_t print_list(const list_t *head)
 {
-	int count = 0;
-	const list_t *current;
+	size_t count = 0;
+	const list_t *current = head;
 
-	current = h->next;
 	while (current != NULL)
 	{
-		if (current->str == NULL)
-		{
-			printf("%s", "[0] (nil)");
-		}
-		else
-		{
-			printf("[%d] %s\n", current->len, current->str);
-		}
-		current = current->next;
+		printf("[%u] %s\n", current->len, current->str);
 		count++;
+		current = current->next;
 	}
+
 	return (count);
 }
