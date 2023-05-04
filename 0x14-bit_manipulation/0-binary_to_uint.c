@@ -1,27 +1,29 @@
 #include "main.h"
 
 /**
- * binary_to_uint - function to convert from binary to decimal
- * @b: character
- * Return: 0 or total
+ * binary_to_uint - binary to an unsigned int.
+ * @binary: 0 or result
+ * Return: converted number, or 0
  */
-
-unsigned int binary_to_uint(const char *b)
+unsigned int binary_to_uint(const char *binary)
 {
-	int bLen = _strlen(b);
-	unsigned int total = 1;
+	unsigned int result = 0;
 	int i = 0;
 
-	while (i < bLen)
+	if (!binary)
+		return (0);
+
+	while (binary[i] != '\0')
 	{
-		if (b[i] == '1')
-		{
-			total += 1 << (bLen - i - 1);
-		}
-		else if (b[i] != '0')
-		{
+		if (binary[i] != '0' && binary[i] != '1')
 			return (0);
-		}
-	};
-	return (total);
+
+		result <<= 1;
+		if (binary[i] == '1')
+			result += 1;
+
+		i++;
+	}
+
+	return (result);
 }
