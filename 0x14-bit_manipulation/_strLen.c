@@ -9,10 +9,10 @@
 int _strlen(const char *str)
 {
 	int count = 0;
-	while (*str)
+	while (*str != '\0')
 	{
 		count++;
-		*str++;
+		++str;
 	};
 	return (count);
 }
