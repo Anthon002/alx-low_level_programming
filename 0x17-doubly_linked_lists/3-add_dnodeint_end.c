@@ -29,12 +29,12 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 		return (nNode);
 	}
 
-	temp = *head;
-	while (temp->next != NULL)
-		temp = temp->next;
+	temporary = *head;
+	while (temporary->next != NULL)
+		temporary = temporary->next;
 
-	temp->next = nNode;
-	nNode->prev = temp;
+	temporary->next = nNode;
+	nNode->prev = temporary;
 
 	return (nNode);
 }
