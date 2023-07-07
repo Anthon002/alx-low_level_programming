@@ -6,17 +6,13 @@
  */
 unsigned long int hash_djb2(const unsigned char *str)
 {
-	    unsigned long int hash = 5321;
-	    int *character = (int *)malloc(sizeof(int)*100);
-    int i = 0;
-
-    while (*str != '\0')
-    {
-        character[i] = (int)*str;
-       hash = ((hash << 5 )+hash)+character[i];
-        str++;
-        i++;
-    };
-    return(hash);
-    free(character);
+	unsigned long int hash;
+	int c;
+	
+	hash = 5381;
+	while ((c = *str++))
+	{
+		hash = ((hash << 5) + hash) + c;
+	}
+	return (hash);
 }
