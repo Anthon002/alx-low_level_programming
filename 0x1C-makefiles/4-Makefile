@@ -1,0 +1,32 @@
+CC = gcc
+SRC = main.c school.c
+OBJ_DIR = obj
+NAME = school
+RM = rm -f
+CFLAGS = -Wall -Werror -Wextra -pedantic
+
+OBJS = $(addprefix $(OBJ_DIR)/,$(notdir $(SRC:.c=.o)))
+
+.PHONY: all clean oclean fclean re
+
+all: $(NAME)
+
+$(NAME): $(OBJS)
+	$(CC) $(OBJS) -o $(NAME)
+
+$(OBJ_DIR)/%.o: %.c | $(OBJ_DIR)
+	$(CC) $(CFLAGS) -c $< -o $@
+
+$(OBJ_DIR):
+	mkdir -p $(OBJ_DIR)
+
+clean:
+	$(RM) *~ $(OBJ_DIR)/* $(NAME)
+
+oclean:
+	$(RM) $(OBJ_DIR)/*
+
+fclean: clean
+
+re: fclean all
+
