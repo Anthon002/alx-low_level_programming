@@ -1,0 +1,7 @@
+CC = gcc
+SRC_FILES = main.c school.c
+EXECUTABLE = school
+
+all: $(SRC_FILES)
+	$(CC) $(SRC_FILES) -o $(EXECUTABLE)
+
