@@ -1,0 +1,18 @@
+CC = gcc
+SRC = main.c school.c
+OBJ_DIR = obj
+NAME = school
+
+OBJS = $(addprefix $(OBJ_DIR)/,$(notdir $(SRC:.c=.o)))
+
+all: $(NAME)
+
+$(NAME): $(OBJS)
+	$(CC) $(OBJS) -o $(NAME)
+
+$(OBJ_DIR)/%.o: %.c | $(OBJ_DIR)
+	$(CC) -c $< -o $@
+
+$(OBJ_DIR):
+	mkdir -p $(OBJ_DIR)
+
