@@ -19,17 +19,17 @@ int binary_search(int *array, size_t size, int value)
 	for (min = 0, max = size - 1; max >= min;)
 	{
 		printf("Searching in array: ");
-		for (i = left; i < right; i++)
+		for (i = min; i < max; i++)
 			printf("%d, ", array[i]);
 		printf("%d\n", array[i]);
 
-		i = left + (right - left) / 2;
+		i = min + (max - min) / 2;
 		if (array[i] == value)
 			return (i);
 		if (array[i] > value)
-			right = i - 1;
+			max = i - 1;
 		else
-			left = i + 1;
+			min = i + 1;
 	}
 
 	return (-1);
